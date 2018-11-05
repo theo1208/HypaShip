@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:layout_margin="@dimen/menu_icon_padding"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/menu_item_padding_top">
+
+        <TextView
+            android:id="@+id/menu_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_info_24px"
+            android:drawablePadding="@dimen/menu_icon_padding"
+            android:gravity="center_vertical"
+            android:onClick="onMenuItemClicked"
+            android:paddingLeft="@dimen/menu_item_padding_left"
+            android:paddingTop="@dimen/menu_item_padding_top"
+            android:text="@string/menu_about"
+            android:textColor="@color/menu_text"
+            android:textSize="@dimen/menu_text_size" />
+
+        <TextView
+            android:id="@+id/menu_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/baseline_power_settings_new_24px"
+            android:drawablePadding="@dimen/menu_icon_padding"
+            android:gravity="center_vertical"
+            android:onClick="onMenuItemClicked"
+            android:paddingLeft="@dimen/menu_item_padding_left"
+            android:paddingTop="@dimen/menu_item_padding_top"
+            android:text="@string/menu_logout"
+            android:textColor="@color/menu_text"
+            android:textSize="@dimen/menu_text_size" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/menu_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_home_24px"
+                android:drawablePadding="@dimen/menu_icon_padding"
+                android:gravity="center_vertical"
+                android:onClick="onMenuItemClicked"
+                android:paddingLeft="@dimen/menu_item_padding_left"
+                android:paddingTop="@dimen/menu_item_padding_top"
+                android:text="@string/menu_home"
+                android:textColor="@color/menu_text"
+                android:textSize="@dimen/menu_text_size" />
+
+            <TextView
+                android:id="@+id/menu_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_format_list_bulleted_24px"
+                android:drawablePadding="@dimen/menu_icon_padding"
+                android:gravity="center_vertical"
+                android:onClick="onMenuItemClicked"
+                android:paddingLeft="@dimen/menu_item_padding_left"
+                android:paddingTop="@dimen/menu_item_padding_top"
+                android:text="@string/menu_jobs"
+                android:textColor="@color/menu_text"
+                android:textSize="@dimen/menu_text_size" />
+
+            <TextView
+                android:id="@+id/menu_memos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_description_24px"
+                android:drawablePadding="@dimen/menu_icon_padding"
+                android:gravity="center_vertical"
+                android:onClick="onMenuItemClicked"
+                android:paddingLeft="@dimen/menu_item_padding_left"
+                android:paddingTop="@dimen/menu_item_padding_top"
+                android:text="@string/menu_memos"
+                android:textColor="@color/menu_text"
+                android:textSize="@dimen/menu_text_size" />
+
+            <TextView
+                android:id="@+id/menu_load_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/truck_loading"
+                android:drawablePadding="@dimen/menu_icon_padding"
+                android:gravity="center_vertical"
+                android:onClick="onMenuItemClicked"
+                android:paddingLeft="@dimen/menu_item_padding_left"
+                android:paddingTop="@dimen/menu_item_padding_top"
+                android:text="@string/menu_load_vehicle"
+                android:textColor="@color/menu_text"
+                android:textSize="@dimen/menu_text_size" />
+
+            <TextView
+                android:id="@+id/menu_return_depot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/dolly"
+                android:drawablePadding="@dimen/menu_icon_padding"
+                android:gravity="center_vertical"
+                android:onClick="onMenuItemClicked"
+                android:paddingLeft="@dimen/menu_item_padding_left"
+                android:paddingTop="@dimen/menu_item_padding_top"
+                android:text="@string/menu_return_depot"
+                android:textColor="@color/menu_text"
+                android:textSize="@dimen/menu_text_size" />
+
+            <TextView
+                android:id="@+id/menu_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_notes_24px"
+                android:drawablePadding="@dimen/menu_icon_padding"
+                android:gravity="center_vertical"
+                android:onClick="onMenuItemClicked"
+                android:paddingLeft="@dimen/menu_item_padding_left"
+                android:paddingTop="@dimen/menu_item_padding_top"
+                android:text="@string/menu_summary"
+                android:textColor="@color/menu_text"
+                android:textSize="@dimen/menu_text_size" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

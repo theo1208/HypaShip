@@ -6,4 +6,13 @@
     <string name="password_hint">Password</string>
     <string name="terms_sign_in">By signing in, you agree to our <u>terms of use</u></string>
     <string name="sign_in_button">SIGN IN</string>
+
+    <string name="menu_about">About</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_home">Set-up</string>
+    <string name="menu_jobs">Job List</string>
+    <string name="menu_memos">Memos</string>
+    <string name="menu_load_vehicle">Load Vehicle</string>
+    <string name="menu_return_depot">Return to Depot</string>
+    <string name="menu_summary">Summary</string>
 </resources>
