@@ -6,6 +6,8 @@
     <string name="password_hint">Password</string>
     <string name="terms_sign_in">By signing in, you agree to our <u>terms of use</u></string>
     <string name="sign_in_button">SIGN IN</string>
+    <string name="missing_field">One of the fields is missing.</string>
+    <string name="incorrect_field">One of the fields is incorrect.</string>
 
     <string name="menu_about">About</string>
     <string name="menu_logout">Logout</string>
