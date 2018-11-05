@@ -4,6 +4,6 @@
     <string name="username_hint">Username</string>
     <string name="depo_hint">Depo number</string>
     <string name="password_hint">Password</string>
-    <string name="terms_sign_in">By signing in, you agree to our <u>terms of use</u>></string>
+    <string name="terms_sign_in">By signing in, you agree to our <u>terms of use</u></string>
     <string name="sign_in_button">SIGN IN</string>
 </resources>
