@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         View setup=findViewById(R.id.menu_home);
 
         onMenuItemClicked(setup);
-        
+
         onDrawerClosed(null);
 
         setToolbarListener();
