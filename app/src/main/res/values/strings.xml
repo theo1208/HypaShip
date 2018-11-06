@@ -18,4 +18,12 @@
     <string name="menu_return_depot">Return to Depot</string>
     <string name="menu_summary">Summary</string>
     <string name="logout_confirm">Are you sure you want to log out?</string>
+    <string name="download_manifest">Download Manifest</string>
+    <string name="new_manifest">A new manifest is available</string>
+    <string name="download">DOWNLOAD</string>
+    <string name="load_vehicle">Load Vehicle</string>
+    <string name="scan_load">SCAN LOAD</string>
+    <string name="scan_load">SCAN LOAD</string>
+    <string name="start_job_list">Start Job List</string>
+    <string name="start_job">START JOBS</string>
 </resources>
