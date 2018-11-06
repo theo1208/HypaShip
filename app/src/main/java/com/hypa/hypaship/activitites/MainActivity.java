@@ -13,11 +13,18 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 
 import com.hypa.hypaship.Constants;
+import com.hypa.hypaship.fragments.AboutFragment;
+import com.hypa.hypaship.fragments.BaseFragment;
+import com.hypa.hypaship.fragments.JobsFragment;
+import com.hypa.hypaship.fragments.LoadVehicleFragment;
+import com.hypa.hypaship.fragments.MemosFragment;
 import com.hypa.hypaship.fragments.NavigationFragment;
 import com.hypa.hypaship.R;
+import com.hypa.hypaship.fragments.ReturnToDepotFragment;
+import com.hypa.hypaship.fragments.SetupFragment;
+import com.hypa.hypaship.fragments.SummaryFragment;
 import com.hypa.hypaship.interfaces.FragmentListener;
 
 import butterknife.BindView;
@@ -33,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     SharedPreferences sharedPreferences;
 
+    BaseFragment currentFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +54,12 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
         mNavigationDrawerFragment = (NavigationFragment) getSupportFragmentManager().findFragmentById(R.id.nav_view);
 
-        mNavigationDrawerFragment.setCurrentItem(findViewById(R.id.menu_home));
+
+        View setup=findViewById(R.id.menu_home);
+
+        onMenuItemClicked(setup);
+        
+        onDrawerClosed(null);
 
         setToolbarListener();
 
@@ -95,6 +109,14 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     @Override
     public void onDrawerClosed(@NonNull View drawerView) {
+        if(currentFragment!=null)
+        {
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.animator.fade_in, R.animator.fade_out)
+                    .replace(R.id.content_frame, currentFragment)
+                    .commit();
+            currentFragment=null;
+        }
 
     }
 
@@ -107,20 +129,36 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
     public void onMenuItemClicked(View view) {
 
 
-
-
-
         switch (view.getId()) {
 
             case R.id.menu_logout:
                 displayLogoutAlert();
+                return;
+            case R.id.menu_home:
+               currentFragment =new SetupFragment();
                 break;
-            default:
-                mDrawerLayout.closeDrawer(GravityCompat.START);
-                mNavigationDrawerFragment.setCurrentItem(view);
+            case R.id.menu_jobs:
+                currentFragment =new JobsFragment();
                 break;
-        }
+            case R.id.menu_memos:
+                currentFragment =new MemosFragment();
+                break;
+            case R.id.menu_load_vehicle:
+                currentFragment =new LoadVehicleFragment();
+                break;
+            case R.id.menu_return_depot:
+                currentFragment =new ReturnToDepotFragment();
+                break;
+            case R.id.menu_summary:
+                currentFragment =new SummaryFragment();
+                break;
+            case R.id.menu_about:
+                currentFragment =new AboutFragment();
+                break;
 
+        }
+        mDrawerLayout.closeDrawer(GravityCompat.START);
+        mNavigationDrawerFragment.setCurrentItem(view);
     }
 
     @Override
